@@ -1,16 +1,37 @@
-# mobile
+# Masked Face Recognition App
 
-A new Flutter project.
+A Flutter application for recognizing faces, optimized for masked faces using eye-region features. This app connects to a Python backend (served via Hugging Face Spaces or Docker).
+
+## Features
+- **Real-time Recognition**: Capture or upload photos to recognize faces.
+- **Mask Robust**: Specifically designed to work well even when the subject is wearing a mask.
+- **Fast**: Optimized for quick response times.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
+- Flutter SDK installed.
+- The backend server running (see backend README).
 
-A few resources to get you started if this is your first Flutter project:
+### Configuration
+1. Open `lib/core/config.dart`.
+2. Update the `BASE_URL` with your backend URL.
+   ```dart
+   static const String BASE_URL = 'https://YOUR-SPACE-NAME.hf.space';
+   ```
+   *Note: If running locally with Docker, use your local IP address (e.g., `http://192.168.1.5:7860`).*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Running the App
+```bash
+# Get dependencies
+flutter pub get
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Run on connected device
+flutter run
+```
+
+## structure
+- `lib/core`: Configuration and constants.
+- `lib/screens`: UI screens (Home, Recognition, etc.).
+- `lib/services`: API handling.
+- `lib/widgets`: Reusable UI components.

@@ -108,6 +108,7 @@ flutter run
 **PBL Group 7**
 *   *Haikal Muhammad Rafli*
 *   *[Other Team Members]*
+*   *Nahdia Putri Safira*
 
 ## 📄 License
 
